@@ -52,4 +52,62 @@ body {
     
     }
   
-   
+    #TextBox {
+        padding: 10px;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 2px solid #5394a0;
+        background-color: #f9f3ec;
+        grid-row: 4;
+        grid-column: 2/4;
+        margin: 1em;
+        position: relative;
+      }
+    
+      #button {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 10px;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        border-radius: 10px;
+        
+        margin: 1em;
+      }
+    
+      .New_note {
+        background-color: #5394a0;
+    
+        grid-column: 3/4;
+        
+    
+      }
+    
+      .dark_theme {
+        background-color: #6f6a87;
+        grid-column: 4/4;
+       float: right;
+      }
+    
+      .save_button {
+        background-color: #5394a0;
+    
+        grid-column: 3/4;
+        grid-row: 5;
+        float:inline-end
+      }
+    
+      .Cancel {
+        background-color: #d9827c;
+    
+        grid-column: 4/4;
+        grid-row: 5;
+      
+        padding: 10px;
+        float: right;
+      }
+    
+    
+  
+  
