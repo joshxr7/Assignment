@@ -36,7 +36,6 @@ ul {
   border: 2px solid #2b4950;
   background-color: #f9f3ec;
   margin: 1em;
-  resize: horizontal;
 }
 
 button {
@@ -57,27 +56,32 @@ button {
 .dark_theme {
   order: 3;
   background-color: #6f6a87;
-  float: right;
 }
 
+.button_top {
+  order: 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_bottom {
+  order: 3;
+  display: flex;
+  justify-content: flex-end;
+}
 .save_button {
   background-color: #5394a0;
-
   order: 5;
-  text-align: end;
 }
 
 .Cancel {
   background-color: #d9827c;
-
   order: 5;
-  float: right;
 }
 
 aside {
   order: 6;
   background-color: #f9f3ec;
-  position: static;
 }
 
 footer {
@@ -86,64 +90,52 @@ footer {
   text-align: center;
 }
 
-@media (min-width: 601px) {
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 600px) {
   body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-   
-    position: relative;
   }
 
-  main {
-  }
+  header
+  {
 
-  h1 {
     grid-row: 1;
     grid-column: 1/4;
-  }
 
-  nav {
-    grid-row: 2;
-    grid-column: 4/4;
-    text-align: end;
-    margin: 1em;
   }
 
   aside {
     grid-row: 1/4;
     grid-column: 1;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    left: 0;
+    top: 0;
 
-    position: static;
   }
+
+ 
+
 
   footer {
-    color: #2b4950;
-    grid-column: 1;
-    grid-row: 6;
-    text-align: center;
-  }
-
-  #TextBox {
+    grid-column: 1/4;
     grid-row: 4;
+  }
+  main {
+    grid-row: 3;
     grid-column: 2/4;
-    position: relative;
+  }
+  #TextBox {
+    width: 95%;
   }
 
   button {
     margin: 1em;
   }
-
-  .button_top{
-
-  display: flex;
-  justify-content: space-between;
-
-  }
-
-.button_bottom{
-
-  display: flex;
-  justify-content: flex-end;
-
-}
 }
