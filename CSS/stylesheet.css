@@ -36,6 +36,7 @@ ul {
   border: 2px solid #2b4950;
   background-color: #f9f3ec;
   margin: 1em;
+  resize: horizontal;
 }
 
 button {
@@ -89,7 +90,7 @@ footer {
   body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr;
+   
     position: relative;
   }
 
@@ -132,25 +133,17 @@ footer {
     margin: 1em;
   }
 
-  .New_note {
-    grid-column: 3/4;
+  .button_top{
+
+  display: flex;
+  justify-content: space-between;
+
   }
 
-  .dark_theme {
-    grid-column: 4/4;
-    float: right;
-  }
+.button_bottom{
 
-  .save_button {
-    grid-column: 3/4;
-    grid-row: 5;
-    float: inline-end;
-  }
+  display: flex;
+  justify-content: flex-end;
 
-  .Cancel {
-    grid-column: 4/4;
-    grid-row: 5;
-    padding: 10px;
-    float: right;
-  }
+}
 }
