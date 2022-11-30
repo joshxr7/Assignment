@@ -8,16 +8,22 @@ function changeDarkMode() {
 darkModebutton.addEventListener("click", changeDarkMode);
 
 function changeTextDarkMode() {
- 
-  const initialtext = "Dark Theme"
-    
-  if(darkModebutton.textContent === "Dark Theme") {
-    darkModebutton.textContent = "Light Theme";
-  }
+  const initialtext = "Dark Theme";
 
-  else {
+  if (darkModebutton.textContent === "Dark Theme") {
+    darkModebutton.textContent = "Light Theme";
+  } else {
     darkModebutton.textContent = initialtext;
   }
 }
 
 darkModebutton.addEventListener("click", changeTextDarkMode);
+
+const cancelPagebutton = document.querySelector(".cancel");
+
+function cancelChange() {
+  
+  document.getElementById("cancelButton").style.visibility = "hidden";
+}
+
+cancelPagebutton.addEventListener("click", cancelChange);
