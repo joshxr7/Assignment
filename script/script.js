@@ -22,7 +22,6 @@ darkModebutton.addEventListener("click", changeTextDarkMode);
 const cancelPagebutton = document.querySelector(".cancel");
 
 function cancelChange() {
-  
   document.getElementById("cancelButton").style.visibility = "hidden";
 }
 
@@ -31,8 +30,12 @@ cancelPagebutton.addEventListener("click", cancelChange);
 const newPagebutton = document.querySelector(".New_note");
 
 function reverseCancelChange() {
-  
   document.getElementById("cancelButton").style.visibility = "visible";
 }
 
 newPagebutton.addEventListener("click", reverseCancelChange);
+
+const notesArray = {
+  title: "note one",
+  body: "this is my first note",
+};
