@@ -27,3 +27,12 @@ function cancelChange() {
 }
 
 cancelPagebutton.addEventListener("click", cancelChange);
+
+const newPagebutton = document.querySelector(".New_note");
+
+function reverseCancelChange() {
+  
+  document.getElementById("cancelButton").style.visibility = "visible";
+}
+
+newPagebutton.addEventListener("click", reverseCancelChange);
