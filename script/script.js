@@ -31,11 +31,35 @@ const newPagebutton = document.querySelector(".New_note");
 
 function reverseCancelChange() {
   document.getElementById("cancelButton").style.visibility = "visible";
+
+  
+    document.getElementById("TextBox").value = "";
+  
+    
 }
 
 newPagebutton.addEventListener("click", reverseCancelChange);
 
-const notesArray = {
+let notesArray = {
   title: "note one",
   body: "this is my first note",
 };
+
+const saveButton = document.querySelector(".save_button");
+
+function textboxChange() {
+  user_var = ""
+
+  alert("Print the title of the Note you want to save");
+
+
+ 
+ 
+  document.body.appendChild(user_var);
+
+//   Add a new JS object to the notesArray with the provided title and the text in the text area as the body
+// Add a list item to the sidebar with the title of the JS object you just added to the array
+
+}
+
+saveButton.addEventListener("click", textboxChange)
