@@ -4,74 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="CSS/stylesheet.css" rel="stylesheet" />
+    <link href="CSS/stylesheet.css" rel="stylesheet"/>
     <script defer src="script/script.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?=Nunito&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
     <title>Assignment</title>
   </head>
+
+
   <body>
-    <header>
-      <h1>Take Better Notes</h1>
-      <nav>
-        <a> About</a>
-        <a>Docs</a>
-      </nav>
-    </header>
-    <main>
-      <div class="button_top">
-      <button class="New_note" id="button" type="button">New Note</button>
-    
-      <button class="dark_theme" id="button" type="button">Dark Theme</button>
-    </div>
-    <div id="cancelButton">
-      <textarea id="TextBox" name="TextBox" rows="8" cols="57">
-This is a placeholder
-    </textarea
-      >
-      <div class="button_bottom">
-      <button class="save_button" id="button" type="button">Save</button>
+    <div class="main-element">
+      <header>
+        <h1>Take Better Notes</h1>
+        <nav>
+          <a>About</a>
+          <a>Docs</a>
+        </nav>
+      </header>
 
-      <button class="cancel" id="button" type="button">Cancel</button>
-      </div>
-    </div>
-    </main>
-    <footer>
-      <h2>Keep in touch</h2>
-      <a
-        href="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png"
-        title="Linkedin"
-      >
-        <img
+      <main>
+        <div id="button">
+        <div class="button_top">
+            <button id="New_note" class="green_button" type="button">New Note</button>
+            <button id="dark_theme" class="dark_button" type="button">Dark Theme</button>
+        </div>
+        <div id="cancelButton">
+        <div class="textshape">
+            <textarea id="TextBox" class="textarea">This is a placeholder</textarea>
+        </div>
+        <div class="button_bottom">
+            <button id="save_button" class="green_button" type="button">Save</button>
+            <button id="cancel" class="red_button" type="button">Cancel</button>
+        </div>
+        </div>
+        </div>
+      </main>
+
+      <footer>
+        <h2>Keep in touch</h2>
+        <a href="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png" title="Linkedin">
+          <img 
           src="./images/linkedin_circle_color-512.webp"
-          alt="linkedin"
-          height="50px"
-          width="50px"
-        />
-      </a>
-      <a
-        href="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png"
-        title="InternetLine"
-      >
-        <img
-          src="./images/Internet_Line-02-512.webp"
-          alt="InternetLine"
-          height="50px"
-          width="50px"
-        />
-      </a>
-    </footer>
+            alt="linkedin"
+            height="50px"
+            width="50px"
+          />
+        </a>
+        <a
+          href="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png"
+          title="InternetLine"
+        >
+          <img
+            src="./images/Internet_Line-02-512.webp"
+            alt="InternetLine"
+            height="50px"
+            width="50px"
+          />
+        </a>
+      </footer>
+    </div>
 
-    <aside>
-      
+    <div id="sideBar" class="side">
       <h1>My Notes</h1>
-      <ul>
+      <ul class="sideList">
         <li>note one</li>
         <li>note two</li>
       </ul>
-     
-    </aside>
+    </div>
   </body>
 </html>

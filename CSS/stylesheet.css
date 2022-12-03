@@ -3,22 +3,18 @@ body {
   flex-direction: column;
   background-color: #edddd0;
   font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 h1 {
-  order: 1;
   color: #2b4950;
   text-align: center;
 }
 
-main {
-  position: relative;
-}
-
 nav {
-  order: 2;
   color: #2b4950;
   text-align: right;
   font-size: 1rem;
@@ -28,14 +24,21 @@ ul {
   color: #2b4950;
   list-style-type: square;
 }
-#TextBox {
-  order: 3;
+
+.textshape {
+  display: flex;
+  height: 30vh;
+}
+
+.textarea {
   padding: 10px;
   line-height: 1.5;
   border-radius: 5px;
   border: 2px solid #2b4950;
   background-color: #f9f3ec;
   margin: 1em;
+  flex-grow: 1;
+  resize: none;
 }
 
 button {
@@ -48,91 +51,71 @@ button {
   border-radius: 10px;
 }
 
-.New_note {
-  order: 3;
+.green_button {
   background-color: #5394a0;
 }
 
-.dark_theme {
-  order: 3;
+.dark_button {
   background-color: #6f6a87;
 }
 
+.red_button {
+  background-color: #d9827c;
+}
+
 .button_top {
-  order: 3;
   display: flex;
   justify-content: space-between;
 }
 
 .button_bottom {
-  order: 3;
   display: flex;
   justify-content: flex-end;
 }
-.save_button {
-  background-color: #5394a0;
-  order: 5;
-}
 
-.cancel {
-  background-color: #d9827c;
-  order: 5;
-}
-
-aside {
-  order: 6;
+.side {
   background-color: #f9f3ec;
 }
 
 footer {
-  order: 7;
   color: #2b4950;
   text-align: center;
 }
 
 .dark-mode {
-  background-color: black;
- 
+  background-color: rgb(38, 32, 32);
+  color: white;
+}
+
+.dark-mode-textbox {
+  background-color: rgb(52, 49, 49);
+  color: white;
+}
+
+.dark-mode-green {
+  background-color: #5394a086;
+}
+
+.dark-mode-red {
+  background-color: #80403bfe;
 }
 
 @media (min-width: 600px) {
   body {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
   }
 
-  header
-  {
-
-    grid-row: 1;
-    grid-column: 1/4;
-
-  }
-
-  aside {
+  .side {
     grid-row: 1/4;
     grid-column: 1;
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    left: 0;
-    top: 0;
-
+    min-height: 100vh;
   }
 
- 
-
-
-  footer {
-    grid-column: 1/4;
-    grid-row: 4;
-  }
-  main {
-    grid-row: 3;
+  .main-element {
     grid-column: 2/4;
-  }
-  #TextBox {
-    width: 95%;
+    grid-row: 1/4;
   }
 
   button {
