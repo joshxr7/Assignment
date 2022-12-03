@@ -85,3 +85,21 @@ function textboxChange(note) {
 
 saveButton.addEventListener("click", textBoxInfo);
 
+const listButton = document.querySelector("li");
+
+const noteClick = document.querySelector(".sideList");
+
+noteClick.addEventListener("click", listClick);
+
+function listClick(event) {
+  for (let i of notesArray) {
+    if (event.target.textContent === i.title) {
+      document.getElementById("TextBox").value = i.body;
+      console.log(i.body);
+    }
+  }
+}
+
+listButton.addEventListener("click", listClick);
+
+
