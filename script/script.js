@@ -57,3 +57,31 @@ let notesArray = [
   { title: "note two", body: "this is my second note" },
 ];
 
+const saveButton = document.querySelector("#save_button");
+
+function textBoxInfo() {
+  const user_var = prompt("Please enter the name of the note");
+
+  const text = document.querySelector("#TextBox");
+
+  let note = {
+    title: user_var,
+    body: text.value,
+  };
+  user_var.value = "";
+  text.value = "";
+  textboxChange(note);
+
+  notesArray.push(note);
+  console.log(notesArray);
+}
+
+function textboxChange(note) {
+  const text_area = document.querySelector(".sideList");
+  const list = document.createElement("li");
+  list.textContent = `${note.title}`;
+  text_area.appendChild(list);
+}
+
+saveButton.addEventListener("click", textBoxInfo);
+
